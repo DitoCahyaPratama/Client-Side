@@ -1,0 +1,101 @@
+<html>
+	<head>
+	 	<meta name="viewport" content="width=device-width, initial-scale=1" />  
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta charset="UTF-8" />
+		<title>Burgerr - Your Delicious Burger</title>
+		<link href="css/simple-grid.min.css" rel="stylesheet" media="screen" />
+		<link href="css/stylesheet.css" rel="stylesheet" media="screen" />
+		<script type="text/javascript" src="jQueryAssets/jquery-1.11.1.min.js"></script>
+		<script src="js/item.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	
+	<body>
+		<header>
+			<div class="container">
+				<div class="col-6">
+					<div class="col-12"><a href="./main.html" class="logo">BURGERR</a></div>
+					<div class="sub-logo col-12">Your Delicious Burger</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row">
+
+				<div class="col-6">
+					<div id="control">
+
+						<div class="col-12">
+							<button onclick="order.reset()">RESET</button>
+							<div id="trash"> 
+								<p>DRAG HERE TO RETURN</p>
+							</div>
+						</div>
+
+						<div class="col-12">
+							<div>Drag your burger bellow</div>
+							<button onclick="toOrder()">ORDER</button> 
+							<div id="order">
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div id="item" class="col-12">
+						<div class="row">
+							<a class="prev" onclick="item.prev()">&#10094;</a>
+		 					<a class="next" onclick="item.next()">&#10095;</a>
+		 				</div>
+						<div class="" id="2"> 
+							<div class="desc">Vegetable - $0.5</div>
+							<img src="img/vegetable.png" class="scale" ondragend="order.add(2)"> 
+						</div>
+						<div class="slide" id="3"> 
+							<div class="desc">Beef - $5</div>
+							<img src="img/beef.png"  class="scale" ondragend="order.add(3)"> 
+						</div>
+						<div class="slide" id="4"> 
+							<div class="desc">Egg - $2</div>
+							<img src="img/egg.png"  class="scale" ondragend="order.add(4)"> 
+						</div>
+						<div class="slide" id="5"> 
+							<div class="desc">Tomato - $1</div>
+							<img src="img/tomato.png"  class="scale" ondragend="order.add(5)"> 
+						</div>
+						<div class="slide" id="6"> 
+							<div class="desc">Cheese - $2</div>
+							<img src="img/cheese.png"  class="scale" ondragend="order.add(6)"> 
+						</div>
+						<div class="slide" id="7"> 
+							<div class="desc">Onion - $1</div>
+							<img src="img/onion.png"  class="scale" ondragend="order.add(7)"> 
+						</div>
+						<div class="slide" id="8"> 
+							<div class="desc">Pikle - $1</div>
+							<img src="img/pickle.png"  class="scale" ondragend="order.add(8)"> 
+						</div>
+					</div>
+					<div class="col-12"> 
+						<div class="det">Detail Order</div>
+						<div id="table-detail"> 
+							<table id="detail">
+							</table>
+						</div>
+						<div>
+							<table id="total">
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<footer>
+
+		</footer>
+	</body>
+</html>
